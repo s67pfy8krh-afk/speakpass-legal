@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>プライバシーポリシー — SpeakPass</title>
-  <meta name="description" content="SpeakPass プライバシーポリシー" />
+  <title>Privacy Policy — SpeakPass</title>
+  <meta name="description" content="SpeakPass Privacy Policy" />
   <style>
     :root {
       --bg: #0b1220;
@@ -34,6 +34,7 @@
     .logo { font-weight: 800; letter-spacing: -.02em; }
     nav { display: flex; flex-wrap: wrap; gap: 14px; font-size: .9rem; }
     h1 { font-size: 1.6rem; margin: 0 0 8px; font-weight: 800; }
+    .page-title[hidden] { display: none !important; }
     .updated { color: var(--muted); font-size: .9rem; margin-bottom: 20px; }
     .lang-tabs { display: flex; gap: 8px; margin-bottom: 24px; }
     .lang-tabs button {
@@ -51,7 +52,9 @@
     ul.bullets { list-style: none; padding: 0; margin: 0 0 12px; }
     ul.bullets li { margin: 0 0 8px; padding-left: 0; }
     ul.bullets .mark { color: var(--muted); margin-right: 6px; font-variant-numeric: tabular-nums; }
-    .note { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: .85rem; }
+    .i18n-ja { display: none; }
+    html[lang="ja"] .i18n-ja { display: inline; }
+    html[lang="ja"] .i18n-en { display: none; }
   </style>
 </head>
 <body>
@@ -59,157 +62,19 @@
     <header>
       <a class="logo" href="./index.html">SpeakPass</a>
       <nav>
-        <a href="./terms.html">利用規約</a>
-        <a href="./privacy.html">プライバシー</a>
-        <a href="./commercial.html">特商法</a>
-        <a href="./index.html">トップ</a>
+        <a href="./terms.html"><span class="i18n-en">Terms</span><span class="i18n-ja">利用規約</span></a>
+        <a href="./privacy.html"><span class="i18n-en">Privacy</span><span class="i18n-ja">プライバシー</span></a>
+        <a href="./commercial.html"><span class="i18n-en">Legal notice</span><span class="i18n-ja">特商法</span></a>
+        <a href="./index.html"><span class="i18n-en">Home</span><span class="i18n-ja">トップ</span></a>
       </nav>
     </header>
-    <h1>プライバシーポリシー</h1>
+    <h1 class="page-title" data-lang-title="en">Privacy Policy</h1>
+    <h1 class="page-title" data-lang-title="ja" hidden>プライバシーポリシー</h1>
     <div class="lang-tabs" role="tablist">
-      <button type="button" class="active" data-lang="ja" aria-selected="true">日本語</button>
-      <button type="button" data-lang="en" aria-selected="false">English</button>
+      <button type="button" class="active" data-lang="en" aria-selected="true">English</button>
+      <button type="button" data-lang="ja" aria-selected="false">日本語</button>
     </div>
-    <div id="panel-ja" class="panel active" lang="ja"><p class="updated">最終更新: 2026年10月1日</p>
-<p class="preamble">有限会社ハローズ（以下「当社」）は、個人情報の保護に関する法律その他関連法令を遵守し、本サービス「SpeakPass」（以下「本サービス」）における個人情報等の適切な取扱いに努めます。<br />本ポリシーは、当社がどのような情報を扱い、どのように利用・委託し、ユーザーの権利がどこまで及ぶかを明らかにするものです。<br />地域・国により追加の開示が法令上求められる場合は、必要に応じて本ポリシーを追記・改定します。</p>
-<section class="doc-section">
-<h3>1. 方針</h3>
-<p>1　当社は、本サービス（IELTSスピーキングの録音・採点・フィードバック・学習履歴等）の提供に必要な範囲で個人情報等を取り扱います。</p>
-<p>2　当社は、個人情報を広告配信の目的で販売・提供しません。音声を含む個人データを、当社の契約・設定上、基盤モデルの学習（training）に用いる目的で OpenAI・Anthropic 等へ提供しません。</p>
-
-
-</section>
-<section class="doc-section">
-<h3>2. 適用範囲</h3>
-<p>1　本ポリシーは、本アプリおよび本サービスに関連して当社が取り扱う個人情報等に適用されます。</p>
-<p>2　外部サイトやストア（App Store / Google Play）の取扱いは、各事業者の規約・ポリシーに従います。本ポリシーは、当社の従業員・採用応募者等への取扱いを対象としません。</p>
-
-
-</section>
-<section class="doc-section">
-<h3>3. 個人データの定義</h3>
-<p>1　本ポリシーにおける「個人データ」とは、生存する個人に関する情報であって、氏名、メールアドレス、識別子その他により特定の個人を識別できるもの、または他の情報と容易に照合でき特定の個人を識別できるものをいいます。</p>
-<p>2　個人を識別できない形に集計・匿名化した情報は、本ポリシーの「個人データ」には含みません。</p>
-
-
-</section>
-<section class="doc-section">
-<h3>4. 収集する情報</h3>
-<p>1　当社は、次の区分で情報を取得することがあります。必須項目を提供いただけない場合、一部機能を利用できないことがあります。</p>
-<ul class="bullets">
-<li><span class="mark">•</span> 【ご本人から】アカウント情報（匿名 ID、Apple / Google / メール連携時の識別子、メールアドレス、表示に必要な最小限のプロフィール情報）、お問い合わせ内容・添付・返信先メール（送信いただいた場合）、任意で入力する学習設定等</li>
-<li><span class="mark">•</span> 【自動取得】端末 ID、OS・アプリバージョン等の技術情報、利用状況の集計イベント（文字起こし全文は含みません）、セキュリティ・不正防止のための技術ログ（IP のハッシュ化等を含む場合あり）</li>
-<li><span class="mark">•</span> 【第三者経由】Apple / Google のサインイン成功に伴うトークン・識別子（各社のログイン資格情報そのものは受け取りません）、RevenueCat およびストア経由の購読・購入状態</li>
-<li><span class="mark">•</span> 【サービス利用に伴い生成】録音音声（一時）、文字起こしテキスト、採点結果、弱点分析、練習履歴、学習統計</li>
-</ul>
-
-</section>
-<section class="doc-section">
-<h3>5. 利用目的</h3>
-<p>1　収集した情報は、次の目的の達成に必要な範囲で利用します。</p>
-<ul class="bullets">
-<li><span class="mark">•</span> 本サービスの提供（録音の受付、文字起こし、採点・フィードバック、弱点分析、復習、学習履歴・統計の表示）</li>
-<li><span class="mark">•</span> 無料枠・プレミアム・追加パック・フェアユースの提供と、不正利用・過負荷の防止</li>
-<li><span class="mark">•</span> アカウント連携、データのバックアップ・復元、認証状態の維持</li>
-<li><span class="mark">•</span> お問い合わせ対応、重要なお知らせ、規約・ポリシー改定の通知</li>
-<li><span class="mark">•</span> 障害対応、セキュリティ監視、サービス品質の改善（匿名化・集計化した分析を含む）</li>
-<li><span class="mark">•</span> 法令・契約上の義務の履行、紛争の予防・解決</li>
-</ul>
-
-</section>
-<section class="doc-section">
-<h3>6. 音声データの取扱い</h3>
-<p>1　本サービスの中核機能として、マイクへのアクセスおよび音声の録音・送信が必要です。音声は、採点・フィードバック生成および不正防止の目的にのみ使用します。</p>
-<p>2　サーバーへアップロードされた音声は、採点処理完了後に削除する設計です。処理失敗時や未処理の一時ファイルも、定期的な掃除の対象とします。端末内の録音ファイルも、採点後に削除する設計です。</p>
-<p>3　委託先（OpenAI、Anthropic 等）では、不正利用の監視等のため、各社の定める期間、データが一時的に保持される場合があります。</p>
-<p>4　音声を広告配信や第三者への販売目的で利用・提供しません。当社の契約・設定上、音声を基盤モデルの学習に用いる目的では外部 API に提供しません。</p>
-
-
-</section>
-<section class="doc-section">
-<h3>7. 課金・決済</h3>
-<p>1　有料プランの決済は、App Store / Google Play および当社が利用する購読管理サービス（RevenueCat）を通じて行われます。当社は、クレジットカード番号等の決済手段情報を本サービス上で直接受け取り・保管しません。</p>
-<p>2　購読状態・購入履歴の確認に必要な識別情報は、ストアおよび RevenueCat から取得し、プレミアム機能の提供・復元・不正防止に利用します。各決済事業者の取扱いは、それぞれのプライバシーポリシーに従います。</p>
-
-
-</section>
-<section class="doc-section">
-<h3>8. 委託・国外での取扱い</h3>
-<p>1　当社は、サービス提供のため以下の外部事業者に処理を委託することがあります。処理の一部は日本国外（シンガポールおよび米国）で行われます。国外への取扱いを希望されない場合、本サービスを利用できないことがあります。</p>
-<p>2　当社は、本サービスの利用開始時（同意画面）において、外国にある第三者への個人データの提供について、ユーザーの同意を取得します。</p>
-<p>3　米国には、個人情報保護に関する包括的な連邦法はなく、分野別の連邦法および州法（例: カリフォルニア州の消費者プライバシー法）等によって規律されています。シンガポールには、個人データ保護法（PDPA）があります。当社は、これらの制度を把握したうえで、契約および技術的・組織的措置により個人データの保護に努めています。</p>
-<p>4　録音・文字起こし・採点のため OpenAI および Anthropic の API にデータを送信します。当社の契約・設定上、これらの API 経由で送信したデータは、各社の基盤モデルの学習（training）に用いられない運用を前提としています（各社の仕様変更時は本ポリシーを更新します）。提供先は、アクセス制御、暗号化通信、契約上の守秘等の措置を講じています。当社は委託の目的達成に必要な範囲で監督します。</p>
-<p>5　委託先では、不正利用の監視等のため、各社の定める期間、データが一時的に保持される場合があります。</p>
-<p>6　主な委託先は次のとおりです。各社のプライバシーポリシーもあわせてご確認ください。</p>
-<ul class="bullets">
-<li><span class="mark">(1)</span> Supabase, Inc.（処理拠点: シンガポール／ap-southeast-1。運営会社は米国）— 認証、データベース、クラウド Functions、ストレージ</li>
-<li><span class="mark">(2)</span> OpenAI, L.L.C.（米国）— 音声認識（文字起こし）</li>
-<li><span class="mark">(3)</span> Anthropic, PBC（米国）— AI 採点・フィードバック生成</li>
-<li><span class="mark">(4)</span> RevenueCat, Inc.（米国）— サブスクリプション状態の管理</li>
-<li><span class="mark">(5)</span> Apple Inc.（米国）— サインイン、App Store 課金</li>
-<li><span class="mark">(6)</span> Google LLC（米国）— サインイン、Google Play 課金</li>
-<li><span class="mark">(7)</span> Functional Software, Inc. d/b/a Sentry（米国）— クラッシュ解析（当社が監視機能を有効にしている場合）</li>
-</ul>
-
-</section>
-<section class="doc-section">
-<h3>9. 第三者提供</h3>
-<p>1　当社は、法令に基づく場合、人命・身体・財産の保護のため必要な場合、公衆衛生・児童の健全育成に特に必要な場合、国の機関等への協力が必要な場合、またはユーザーの同意がある場合を除き、個人データを第三者に「提供」しません。</p>
-<p>2　採点処理等の委託（OpenAI、Anthropic、Supabase、RevenueCat 等）のうち、国内における取扱い委託は、利用目的の達成に必要な範囲で行います。ただし、外国にある委託先への提供は、第8条に定めるところにより取り扱います。事業譲渡等に伴い個人データを承継させる場合は、法令に従い適切に取り扱います。</p>
-
-
-</section>
-<section class="doc-section">
-<h3>10. 保存・削除・アカウント削除</h3>
-<p>1　個人データは、利用目的の達成に必要な期間保存します。法令上の保存義務、紛争対応、セキュリティ上の必要がある場合は、その目的に必要な期間に限り保持することがあります。</p>
-<p>2　練習履歴・文字起こし等は、サービス提供に必要な期間保存します。古い文字起こしは、運用上の保持ポリシーに従いマスキングまたは削除する場合があります。</p>
-<p>3　アプリ内のアカウント削除により、当社が管理するクラウド上の学習関連データを削除し、端末ローカルの本アプリデータも消去します。ただし、法令上の保存義務がある記録、および当社のバックアップ媒体に残るデータはこの限りではありません。バックアップ上のデータは、通常の業務処理では利用せず、運用上のバックアップサイクルに従い上書き・消去されます。</p>
-<p>4　アカウント削除・アプリ削除は、App Store / Google Play のサブスクリプション解約ではありません。課金停止は各ストアの購読管理から行ってください。</p>
-<p>5　サポート記録、セキュリティログ、課金関連の取引記録は、紛争対応・法令遵守のため、学習データとは別に必要な期間保持することがあります。</p>
-
-
-</section>
-<section class="doc-section">
-<h3>11. 開示等の請求</h3>
-<p>1　ご本人から、個人情報保護法に基づく開示、訂正、追加、削除、利用停止、第三者提供の停止等のご請求があった場合、本人確認のうえ、法令に従い対応します。手数料は無料です。</p>
-<p>2　アプリのアカウント削除機能で対応可能な範囲は、まず当該機能をご利用ください。その他のご請求は、本ポリシー末尾の窓口までご連絡ください。</p>
-<p>3　請求への対応にあたり、本人確認のため追加情報の提供をお願いすることがあります。法令上対応できない場合は、その理由をお知らせします。</p>
-
-
-</section>
-<section class="doc-section">
-<h3>12. 安全管理措置</h3>
-<p>1　当社は、個人データの漏えい、滅失、毀損等を防止するため、次のような合理的な安全管理措置を講じます。</p>
-<ul class="bullets">
-<li><span class="mark">•</span> 組織的措置：取扱い担当の限定、インシデント発生時の対応方針の整備</li>
-<li><span class="mark">•</span> 人的措置：個人データを取り扱う関係者への適切な取扱いの徹底</li>
-<li><span class="mark">•</span> 技術的措置：通信の暗号化（TLS 等）、認証・権限管理、レート制限、音声の短期保持、データベースのアクセス制御、パスワード等の適切な保護</li>
-<li><span class="mark">•</span> 外的環境の把握：個人データを取り扱う国（日本、シンガポールおよび米国）の個人情報保護制度を把握したうえで、必要な措置を講じること</li>
-</ul>
-
-</section>
-<section class="doc-section">
-<h3>13. 未成年・年齢</h3>
-<p>1　本サービスは、13歳以上の方を対象とします。当社は、13歳未満の方から故意に個人データを収集しません。意図せず収集したことが判明した場合は、すみやかに削除します。</p>
-<p>2　18歳未満の方は、保護者の同意を得たうえでご利用ください。同意なく利用した場合、保護者からのお申し出により利用停止等に応じます。</p>
-
-
-</section>
-<section class="doc-section">
-<h3>14. 変更</h3>
-<p>1　本ポリシーは、法令の改正、サービスの変更、委託先の変更等に応じて改定することがあります。</p>
-<p>2　重要な変更は、効力発生日を示してアプリ内掲示その他適切な方法でお知らせするよう努めます。改定後に本サービスを利用した場合、改定後のポリシーに同意したものとみなすことがあります。ただし、利用目的を変更する場合は、法令に従い必要な同意を得ます。</p>
-
-
-</section>
-<section class="doc-section">
-<h3>15. お問い合わせ・事業者</h3>
-<p>有限会社ハローズ<br />設定 → お問い合わせ からご連絡ください。<br />所在地・代表者等の詳細は、お問い合わせいただければ法令の範囲でご案内します。</p>
-<p>個人情報の取扱いに関するご質問・ご請求は、上記窓口までご連絡ください。</p>
-
-
-</section></div>
-    <div id="panel-en" class="panel" lang="en"><p class="updated">Last updated: October 1, 2026</p>
+    <div id="panel-en" class="panel active" lang="en"><p class="updated">Last updated: October 1, 2026</p>
 <p class="preamble">HALOWS, Y.K. (&quot;we&quot;) complies with applicable privacy laws and explains how &quot;SpeakPass&quot; (the &quot;Service&quot;) handles information and what rights you have.<br />Japanese is the authoritative language of this Policy; this English version is provided for convenience.<br />If region-specific disclosures become required, we will update this Policy as needed.</p>
 <section class="doc-section">
 <h3>1. Our approach</h3>
@@ -348,18 +213,183 @@
 
 
 </section></div>
+    <div id="panel-ja" class="panel" lang="ja"><p class="updated">最終更新: 2026年10月1日</p>
+<p class="preamble">有限会社ハローズ（以下「当社」）は、個人情報の保護に関する法律その他関連法令を遵守し、本サービス「SpeakPass」（以下「本サービス」）における個人情報等の適切な取扱いに努めます。<br />本ポリシーは、当社がどのような情報を扱い、どのように利用・委託し、ユーザーの権利がどこまで及ぶかを明らかにするものです。<br />地域・国により追加の開示が法令上求められる場合は、必要に応じて本ポリシーを追記・改定します。</p>
+<section class="doc-section">
+<h3>1. 方針</h3>
+<p>1　当社は、本サービス（IELTSスピーキングの録音・採点・フィードバック・学習履歴等）の提供に必要な範囲で個人情報等を取り扱います。</p>
+<p>2　当社は、個人情報を広告配信の目的で販売・提供しません。音声を含む個人データを、当社の契約・設定上、基盤モデルの学習（training）に用いる目的で OpenAI・Anthropic 等へ提供しません。</p>
+
+
+</section>
+<section class="doc-section">
+<h3>2. 適用範囲</h3>
+<p>1　本ポリシーは、本アプリおよび本サービスに関連して当社が取り扱う個人情報等に適用されます。</p>
+<p>2　外部サイトやストア（App Store / Google Play）の取扱いは、各事業者の規約・ポリシーに従います。本ポリシーは、当社の従業員・採用応募者等への取扱いを対象としません。</p>
+
+
+</section>
+<section class="doc-section">
+<h3>3. 個人データの定義</h3>
+<p>1　本ポリシーにおける「個人データ」とは、生存する個人に関する情報であって、氏名、メールアドレス、識別子その他により特定の個人を識別できるもの、または他の情報と容易に照合でき特定の個人を識別できるものをいいます。</p>
+<p>2　個人を識別できない形に集計・匿名化した情報は、本ポリシーの「個人データ」には含みません。</p>
+
+
+</section>
+<section class="doc-section">
+<h3>4. 収集する情報</h3>
+<p>1　当社は、次の区分で情報を取得することがあります。必須項目を提供いただけない場合、一部機能を利用できないことがあります。</p>
+<ul class="bullets">
+<li><span class="mark">•</span> 【ご本人から】アカウント情報（匿名 ID、Apple / Google / メール連携時の識別子、メールアドレス、表示に必要な最小限のプロフィール情報）、お問い合わせ内容・添付・返信先メール（送信いただいた場合）、任意で入力する学習設定等</li>
+<li><span class="mark">•</span> 【自動取得】端末 ID、OS・アプリバージョン等の技術情報、利用状況の集計イベント（文字起こし全文は含みません）、セキュリティ・不正防止のための技術ログ（IP のハッシュ化等を含む場合あり）</li>
+<li><span class="mark">•</span> 【第三者経由】Apple / Google のサインイン成功に伴うトークン・識別子（各社のログイン資格情報そのものは受け取りません）、RevenueCat およびストア経由の購読・購入状態</li>
+<li><span class="mark">•</span> 【サービス利用に伴い生成】録音音声（一時）、文字起こしテキスト、採点結果、弱点分析、練習履歴、学習統計</li>
+</ul>
+
+</section>
+<section class="doc-section">
+<h3>5. 利用目的</h3>
+<p>1　収集した情報は、次の目的の達成に必要な範囲で利用します。</p>
+<ul class="bullets">
+<li><span class="mark">•</span> 本サービスの提供（録音の受付、文字起こし、採点・フィードバック、弱点分析、復習、学習履歴・統計の表示）</li>
+<li><span class="mark">•</span> 無料枠・プレミアム・追加パック・フェアユースの提供と、不正利用・過負荷の防止</li>
+<li><span class="mark">•</span> アカウント連携、データのバックアップ・復元、認証状態の維持</li>
+<li><span class="mark">•</span> お問い合わせ対応、重要なお知らせ、規約・ポリシー改定の通知</li>
+<li><span class="mark">•</span> 障害対応、セキュリティ監視、サービス品質の改善（匿名化・集計化した分析を含む）</li>
+<li><span class="mark">•</span> 法令・契約上の義務の履行、紛争の予防・解決</li>
+</ul>
+
+</section>
+<section class="doc-section">
+<h3>6. 音声データの取扱い</h3>
+<p>1　本サービスの中核機能として、マイクへのアクセスおよび音声の録音・送信が必要です。音声は、採点・フィードバック生成および不正防止の目的にのみ使用します。</p>
+<p>2　サーバーへアップロードされた音声は、採点処理完了後に削除する設計です。処理失敗時や未処理の一時ファイルも、定期的な掃除の対象とします。端末内の録音ファイルも、採点後に削除する設計です。</p>
+<p>3　委託先（OpenAI、Anthropic 等）では、不正利用の監視等のため、各社の定める期間、データが一時的に保持される場合があります。</p>
+<p>4　音声を広告配信や第三者への販売目的で利用・提供しません。当社の契約・設定上、音声を基盤モデルの学習に用いる目的では外部 API に提供しません。</p>
+
+
+</section>
+<section class="doc-section">
+<h3>7. 課金・決済</h3>
+<p>1　有料プランの決済は、App Store / Google Play および当社が利用する購読管理サービス（RevenueCat）を通じて行われます。当社は、クレジットカード番号等の決済手段情報を本サービス上で直接受け取り・保管しません。</p>
+<p>2　購読状態・購入履歴の確認に必要な識別情報は、ストアおよび RevenueCat から取得し、プレミアム機能の提供・復元・不正防止に利用します。各決済事業者の取扱いは、それぞれのプライバシーポリシーに従います。</p>
+
+
+</section>
+<section class="doc-section">
+<h3>8. 委託・国外での取扱い</h3>
+<p>1　当社は、サービス提供のため以下の外部事業者に処理を委託することがあります。処理の一部は日本国外（シンガポールおよび米国）で行われます。国外への取扱いを希望されない場合、本サービスを利用できないことがあります。</p>
+<p>2　当社は、本サービスの利用開始時（同意画面）において、外国にある第三者への個人データの提供について、ユーザーの同意を取得します。</p>
+<p>3　米国には、個人情報保護に関する包括的な連邦法はなく、分野別の連邦法および州法（例: カリフォルニア州の消費者プライバシー法）等によって規律されています。シンガポールには、個人データ保護法（PDPA）があります。当社は、これらの制度を把握したうえで、契約および技術的・組織的措置により個人データの保護に努めています。</p>
+<p>4　録音・文字起こし・採点のため OpenAI および Anthropic の API にデータを送信します。当社の契約・設定上、これらの API 経由で送信したデータは、各社の基盤モデルの学習（training）に用いられない運用を前提としています（各社の仕様変更時は本ポリシーを更新します）。提供先は、アクセス制御、暗号化通信、契約上の守秘等の措置を講じています。当社は委託の目的達成に必要な範囲で監督します。</p>
+<p>5　委託先では、不正利用の監視等のため、各社の定める期間、データが一時的に保持される場合があります。</p>
+<p>6　主な委託先は次のとおりです。各社のプライバシーポリシーもあわせてご確認ください。</p>
+<ul class="bullets">
+<li><span class="mark">(1)</span> Supabase, Inc.（処理拠点: シンガポール／ap-southeast-1。運営会社は米国）— 認証、データベース、クラウド Functions、ストレージ</li>
+<li><span class="mark">(2)</span> OpenAI, L.L.C.（米国）— 音声認識（文字起こし）</li>
+<li><span class="mark">(3)</span> Anthropic, PBC（米国）— AI 採点・フィードバック生成</li>
+<li><span class="mark">(4)</span> RevenueCat, Inc.（米国）— サブスクリプション状態の管理</li>
+<li><span class="mark">(5)</span> Apple Inc.（米国）— サインイン、App Store 課金</li>
+<li><span class="mark">(6)</span> Google LLC（米国）— サインイン、Google Play 課金</li>
+<li><span class="mark">(7)</span> Functional Software, Inc. d/b/a Sentry（米国）— クラッシュ解析（当社が監視機能を有効にしている場合）</li>
+</ul>
+
+</section>
+<section class="doc-section">
+<h3>9. 第三者提供</h3>
+<p>1　当社は、法令に基づく場合、人命・身体・財産の保護のため必要な場合、公衆衛生・児童の健全育成に特に必要な場合、国の機関等への協力が必要な場合、またはユーザーの同意がある場合を除き、個人データを第三者に「提供」しません。</p>
+<p>2　採点処理等の委託（OpenAI、Anthropic、Supabase、RevenueCat 等）のうち、国内における取扱い委託は、利用目的の達成に必要な範囲で行います。ただし、外国にある委託先への提供は、第8条に定めるところにより取り扱います。事業譲渡等に伴い個人データを承継させる場合は、法令に従い適切に取り扱います。</p>
+
+
+</section>
+<section class="doc-section">
+<h3>10. 保存・削除・アカウント削除</h3>
+<p>1　個人データは、利用目的の達成に必要な期間保存します。法令上の保存義務、紛争対応、セキュリティ上の必要がある場合は、その目的に必要な期間に限り保持することがあります。</p>
+<p>2　練習履歴・文字起こし等は、サービス提供に必要な期間保存します。古い文字起こしは、運用上の保持ポリシーに従いマスキングまたは削除する場合があります。</p>
+<p>3　アプリ内のアカウント削除により、当社が管理するクラウド上の学習関連データを削除し、端末ローカルの本アプリデータも消去します。ただし、法令上の保存義務がある記録、および当社のバックアップ媒体に残るデータはこの限りではありません。バックアップ上のデータは、通常の業務処理では利用せず、運用上のバックアップサイクルに従い上書き・消去されます。</p>
+<p>4　アカウント削除・アプリ削除は、App Store / Google Play のサブスクリプション解約ではありません。課金停止は各ストアの購読管理から行ってください。</p>
+<p>5　サポート記録、セキュリティログ、課金関連の取引記録は、紛争対応・法令遵守のため、学習データとは別に必要な期間保持することがあります。</p>
+
+
+</section>
+<section class="doc-section">
+<h3>11. 開示等の請求</h3>
+<p>1　ご本人から、個人情報保護法に基づく開示、訂正、追加、削除、利用停止、第三者提供の停止等のご請求があった場合、本人確認のうえ、法令に従い対応します。手数料は無料です。</p>
+<p>2　アプリのアカウント削除機能で対応可能な範囲は、まず当該機能をご利用ください。その他のご請求は、本ポリシー末尾の窓口までご連絡ください。</p>
+<p>3　請求への対応にあたり、本人確認のため追加情報の提供をお願いすることがあります。法令上対応できない場合は、その理由をお知らせします。</p>
+
+
+</section>
+<section class="doc-section">
+<h3>12. 安全管理措置</h3>
+<p>1　当社は、個人データの漏えい、滅失、毀損等を防止するため、次のような合理的な安全管理措置を講じます。</p>
+<ul class="bullets">
+<li><span class="mark">•</span> 組織的措置：取扱い担当の限定、インシデント発生時の対応方針の整備</li>
+<li><span class="mark">•</span> 人的措置：個人データを取り扱う関係者への適切な取扱いの徹底</li>
+<li><span class="mark">•</span> 技術的措置：通信の暗号化（TLS 等）、認証・権限管理、レート制限、音声の短期保持、データベースのアクセス制御、パスワード等の適切な保護</li>
+<li><span class="mark">•</span> 外的環境の把握：個人データを取り扱う国（日本、シンガポールおよび米国）の個人情報保護制度を把握したうえで、必要な措置を講じること</li>
+</ul>
+
+</section>
+<section class="doc-section">
+<h3>13. 未成年・年齢</h3>
+<p>1　本サービスは、13歳以上の方を対象とします。当社は、13歳未満の方から故意に個人データを収集しません。意図せず収集したことが判明した場合は、すみやかに削除します。</p>
+<p>2　18歳未満の方は、保護者の同意を得たうえでご利用ください。同意なく利用した場合、保護者からのお申し出により利用停止等に応じます。</p>
+
+
+</section>
+<section class="doc-section">
+<h3>14. 変更</h3>
+<p>1　本ポリシーは、法令の改正、サービスの変更、委託先の変更等に応じて改定することがあります。</p>
+<p>2　重要な変更は、効力発生日を示してアプリ内掲示その他適切な方法でお知らせするよう努めます。改定後に本サービスを利用した場合、改定後のポリシーに同意したものとみなすことがあります。ただし、利用目的を変更する場合は、法令に従い必要な同意を得ます。</p>
+
+
+</section>
+<section class="doc-section">
+<h3>15. お問い合わせ・事業者</h3>
+<p>有限会社ハローズ<br />設定 → お問い合わせ からご連絡ください。<br />所在地・代表者等の詳細は、お問い合わせいただければ法令の範囲でご案内します。</p>
+<p>個人情報の取扱いに関するご質問・ご請求は、上記窓口までご連絡ください。</p>
+
+
+</section></div>
   </div>
   <script>
-    document.querySelectorAll('.lang-tabs button').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.lang-tabs button').forEach((b) => {
-          b.classList.toggle('active', b === btn);
-          b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+    (function () {
+      var STORAGE_KEY = 'speakpass-legal-lang';
+      function preferJa() {
+        try {
+          var saved = localStorage.getItem(STORAGE_KEY);
+          if (saved === 'ja' || saved === 'en') return saved === 'ja';
+        } catch (e) {}
+        var langs = (navigator.languages && navigator.languages.length)
+          ? navigator.languages
+          : [navigator.language || 'en'];
+        return langs.some(function (l) { return String(l || '').toLowerCase().indexOf('ja') === 0; });
+      }
+      function setLang(lang) {
+        var isJa = lang === 'ja';
+        document.documentElement.lang = isJa ? 'ja' : 'en';
+        document.title = (isJa
+          ? "プライバシーポリシー — SpeakPass"
+          : "Privacy Policy — SpeakPass");
+        document.querySelectorAll('[data-lang-title]').forEach(function (el) {
+          el.hidden = el.getAttribute('data-lang-title') !== lang;
         });
-        document.querySelectorAll('.panel').forEach((p) => p.classList.remove('active'));
-        document.getElementById('panel-' + btn.dataset.lang)?.classList.add('active');
+        document.querySelectorAll('.lang-tabs button').forEach(function (b) {
+          var on = b.getAttribute('data-lang') === lang;
+          b.classList.toggle('active', on);
+          b.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        document.querySelectorAll('.panel').forEach(function (p) { p.classList.remove('active'); });
+        var panel = document.getElementById('panel-' + lang);
+        if (panel) panel.classList.add('active');
+        try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+      }
+      document.querySelectorAll('.lang-tabs button').forEach(function (btn) {
+        btn.addEventListener('click', function () { setLang(btn.getAttribute('data-lang')); });
       });
-    });
+      setLang(preferJa() ? 'ja' : 'en');
+    })();
   </script>
 </body>
 </html>
