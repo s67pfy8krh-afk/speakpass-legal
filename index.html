@@ -3,216 +3,100 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SpeakPass — IELTSスピーキングを録音して、AIがBandでフィードバック</title>
-  <meta name="description" content="IELTS Speaking Part 1〜3を本番形式で練習。録音→AI採点→弱点と言い換えまで。英会話教室より手軽に、ChatGPTより試験特化。" />
-  <!-- Google Ads / Analytics: replace G-XXXX and AW-XXXX before launch -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"></script> -->
+  <title>SpeakPass Support</title>
+  <meta name="description" content="SpeakPass support and legal information." />
   <style>
-    :root {
-      --bg: #0b1220;
-      --surface: #111827;
-      --text: #f8fafc;
-      --muted: #94a3b8;
-      --primary: #3b82f6;
-      --primary-dark: #2563eb;
-      --accent: #22c55e;
-      --border: rgba(148, 163, 184, 0.2);
-      --max: 1080px;
-    }
-    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Segoe UI", sans-serif;
+      background: #fafafa;
+      color: #1a1a1a;
+      line-height: 1.65;
     }
-    a { color: var(--primary); text-decoration: none; }
-    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
-    header {
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border);
-      position: sticky; top: 0; background: rgba(11,18,32,.92); backdrop-filter: blur(8px); z-index: 10;
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 4rem;
     }
-    .logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -.02em; }
-    .hero {
-      padding: 56px 0 48px;
-      background: radial-gradient(ellipse at 50% 0%, rgba(59,130,246,.25), transparent 60%);
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 650;
+      margin: 0 0 0.35rem;
+      letter-spacing: -0.02em;
     }
-    h1 { font-size: clamp(1.9rem, 5vw, 2.75rem); line-height: 1.15; margin: 0 0 16px; font-weight: 800; }
-    .lead { font-size: 1.125rem; color: var(--muted); max-width: 640px; margin-bottom: 28px; }
-    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-    .btn {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: white; font-weight: 700; padding: 14px 28px; border-radius: 999px;
-      box-shadow: 0 8px 24px rgba(37,99,235,.35);
+    .sub {
+      color: #555;
+      margin: 0 0 2rem;
+      font-size: 0.95rem;
     }
-    .btn-secondary {
-      background: transparent; border: 1px solid var(--border); color: var(--text);
-      box-shadow: none; padding: 13px 24px;
+    h2 {
+      font-size: 0.8rem;
+      font-weight: 650;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #666;
+      margin: 2rem 0 0.6rem;
     }
-    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-    .badge {
-      font-size: .85rem; padding: 6px 12px; border-radius: 999px;
-      background: rgba(34,197,94,.12); border: 1px solid rgba(34,197,94,.35); color: #86efac;
+    p { margin: 0 0 0.75rem; }
+    a { color: #0b57d0; }
+    ul {
+      margin: 0;
+      padding-left: 1.1rem;
     }
-    section { padding: 48px 0; }
-    h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 12px; font-weight: 800; }
-    .section-lead { color: var(--muted); margin-bottom: 32px; max-width: 720px; }
-    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-    .card {
-      background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px;
+    li { margin: 0.35rem 0; }
+    .box {
+      border: 1px solid #e5e5e5;
+      background: #fff;
+      border-radius: 8px;
+      padding: 1rem 1.1rem;
+      margin: 1rem 0;
     }
-    .card h3 { margin: 0 0 8px; font-size: 1.1rem; }
-    .card p { margin: 0; color: var(--muted); font-size: .95rem; }
-    .num { font-size: .75rem; font-weight: 800; color: var(--primary); letter-spacing: .08em; }
-    .compare { overflow-x: auto; }
-    table { width: 100%; border-collapse: collapse; font-size: .95rem; }
-    th, td { padding: 12px 14px; border-bottom: 1px solid var(--border); text-align: left; }
-    th { color: var(--muted); font-weight: 600; }
-    .yes { color: #86efac; font-weight: 700; }
-    .partial { color: #fcd34d; }
-    .steps { counter-reset: step; }
-    .step { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
-    .step::before {
-      counter-increment: step; content: counter(step);
-      width: 36px; height: 36px; border-radius: 50%; background: var(--primary);
-      display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;
-    }
-    details {
-      background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-      padding: 16px 20px; margin-bottom: 10px;
-    }
-    summary { cursor: pointer; font-weight: 700; }
-    details p { color: var(--muted); margin: 12px 0 0; font-size: .95rem; }
     footer {
-      border-top: 1px solid var(--border); padding: 32px 0 48px; color: var(--muted); font-size: .875rem;
+      margin-top: 2.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid #e5e5e5;
+      color: #666;
+      font-size: 0.85rem;
     }
-    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; }
-    @media (max-width: 600px) { .hero { padding-top: 36px; } }
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;">
-      <div class="logo">SpeakPass</div>
-      <a href="#download" class="btn" style="padding:10px 20px;font-size:.9rem;">App Store（準備中）</a>
-    </div>
-  </header>
-
   <main>
-    <section class="hero">
-      <div class="wrap">
-        <p class="num">IELTS SPEAKING · AI FEEDBACK</p>
-        <h1>話して、Bandで返ってくる。<br />IELTSスピーキング専用コーチ。</h1>
-        <p class="lead">
-          録音 → 4軸スコア → 弱点と言い換えまで、一気通貫。
-          英会話教室より手軽に、汎用AIチャットより<strong style="color:var(--text)">試験形式に特化</strong>。
-          スキマ時間5分から、Part 1〜3を本番に近い流れで練習できます。
-        </p>
-        <div class="cta-row" id="download">
-          <a class="btn" href="#download">App Storeで始める（近日公開）</a>
-          <a class="btn btn-secondary" href="#why">なぜお得か</a>
-        </div>
-        <div class="badge-row">
-          <span class="badge">無料で採点体験</span>
-          <span class="badge">Part 1〜3 対応</span>
-          <span class="badge">日本語 / English UI</span>
-        </div>
-      </div>
-    </section>
+    <h1>SpeakPass</h1>
+    <p class="sub">IELTS Speaking practice app — support</p>
 
-    <section id="why">
-      <div class="wrap">
-        <h2>なぜ SpeakPass なのか</h2>
-        <p class="section-lead">
-          「話す量」だけ増やすアプリと、「試験で点が取れる練習」は違います。
-          本番は Band 基準・Part 構成・時間制限があります。ここに全部寄せています。
-        </p>
-        <div class="grid-3">
-          <div class="card">
-            <h3>🎯 試験形式そのもの</h3>
-            <p>Part 1 の日常質問、Part 2 の cue card、Part 3 の深掘り。本番と同じ流れで練習し、AIが IELTS 4軸で採点します。</p>
-          </div>
-          <div class="card">
-            <h3>📊 Band が見えるから伸びる</h3>
-            <p>「なんとなく上達」ではなく Overall Band と 4軸スコア。目標 Band を設定し、弱点ドリルとフレーズ帳（スワイプ復習）で次の一手が分かります。</p>
-          </div>
-          <div class="card">
-            <h3>💡 言い換えまで返る</h3>
-            <p>録音したあなたの英文を分析し、日本人学習者向けの弱点解説と、より自然な言い回しを提案。暗記帳に自動で溜まります。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <h2>教室・汎用AIとの違い</h2>
-        <p class="section-lead">価格だけでなく、「試験に直結するか」で選ぶと結果が変わります。</p>
-        <div class="compare">
-          <table>
-            <thead>
-              <tr><th></th><th>SpeakPass</th><th>英会話教室</th><th>汎用AIチャット</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>IELTS Part 1〜3 形式</td><td class="yes">◎</td><td class="partial">△ コース次第</td><td>×</td></tr>
-              <tr><td>Band 基準の採点</td><td class="yes">◎</td><td class="partial">△ 講師次第</td><td>×</td></tr>
-              <tr><td>5分から練習</td><td class="yes">◎</td><td>× 予約・移動</td><td class="yes">◎</td></tr>
-              <tr><td>弱点の記録・復習</td><td class="yes">フレーズ帳</td><td class="partial">メモ次第</td><td>× 履歴が散らばる</td></tr>
-              <tr><td>月額コスト感</td><td class="yes">アプリ課金</td><td>高め</td><td class="yes">低〜中</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <h2>はじめ方（3ステップ）</h2>
-        <div class="steps" style="max-width:560px;margin-top:24px;">
-          <div class="step"><div><strong>App Store からインストール</strong><br /><span style="color:var(--muted)">すぐにゲストで Part 1 を試せます（無料枠あり）。</span></div></div>
-          <div class="step"><div><strong>Part 1 を録音</strong><br /><span style="color:var(--muted)">質問を聞いて英語で答えるだけ。1セッション約5分。</span></div></div>
-          <div class="step"><div><strong>Band とフィードバックを確認</strong><br /><span style="color:var(--muted)">4軸スコア・弱点・言い換え。フレーズ帳に自動保存。</span></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <h2>よくある質問</h2>
-        <details><summary>英会話が初めてでも使えますか？</summary>
-          <p>はい。Part 1 から短い質問で始められます。UI は日本語 / English 切替可能です。</p></details>
-        <details><summary>本当に IELTS の採点基準ですか？</summary>
-          <p>4軸（流暢さ・語彙・文法・発音）を IELTS 基準で AI が評価します。公式試験の代替ではなく、日々の練習用の参考スコアです。</p></details>
-        <details><summary>無料でどこまで試せますか？</summary>
-          <p>Part 1 は3問×1回、Part 2 は1トピック×1回、Part 3 は2問×1回（合計3回）。採点と詳細フィードバックまで体験できます。本番3問の Part 3 とフル模試はプレミアムです。</p></details>
-        <details><summary>ChatGPT との違いは？</summary>
-          <p>本番形式の出題・時間・Band 表示・弱点の蓄積までが一つのアプリにまとまっています。毎回プロンプトを考える必要がありません。</p></details>
-      </div>
-    </section>
-
-    <section style="padding-bottom:64px;">
-      <div class="wrap" style="text-align:center;">
-        <h2>IELTS スピーキングを、習慣にする。</h2>
-        <p class="section-lead" style="margin:0 auto 24px;">録音して、Band で返ってくる。それだけで続けられる。</p>
-        <a class="btn" href="#download">App Store（近日公開）</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <div class="footer-links">
-        <a href="./privacy.html">プライバシーポリシー</a>
-        <a href="./terms.html">利用規約</a>
-        <a href="./commercial.html">特定商取引法に基づく表示</a>
-        <a href="mailto:ieltsspeaking.support@gmail.com">お問い合わせ</a>
-      </div>
-      <p>© SpeakPass · AI feedback for IELTS Speaking</p>
-      <p style="font-size:.8rem;margin-top:8px;">IELTS is a registered trademark of Cambridge English, the British Council, and IDP Education Australia. This app is not affiliated with or endorsed by them.</p>
+    <h2>Contact</h2>
+    <div class="box">
+      <p>Questions about billing, scoring, or your account:</p>
+      <p><a href="mailto:ieltsspeaking.support@gmail.com">ieltsspeaking.support@gmail.com</a></p>
+      <p style="color:#555;font-size:0.9rem;margin:0;">We usually reply within several business days (up to about two weeks).</p>
     </div>
-  </footer>
+
+    <h2>お問い合わせ</h2>
+    <div class="box">
+      <p>課金・採点・アカウントについて:</p>
+      <p><a href="mailto:ieltsspeaking.support@gmail.com">ieltsspeaking.support@gmail.com</a></p>
+      <p style="color:#555;font-size:0.9rem;margin:0;">数営業日〜最大2週間程度でご返信します。</p>
+    </div>
+
+    <h2>In the app / アプリ内</h2>
+    <ul>
+      <li>Settings → Contact / 設定 → お問い合わせ</li>
+      <li>Settings → FAQ / 設定 → よくある質問</li>
+      <li>Cancel subscription: App Store → Subscriptions（解約はストアから）</li>
+    </ul>
+
+    <h2>Legal</h2>
+    <ul>
+      <li><a href="./privacy.html">Privacy Policy</a> / <a href="./privacy.html">プライバシーポリシー</a></li>
+      <li><a href="./terms.html">Terms of Use</a> / <a href="./terms.html">利用規約</a></li>
+      <li><a href="./commercial.html">Commercial Transaction Act notice</a> / <a href="./commercial.html">特商法に基づく表示</a></li>
+    </ul>
+
+    <footer>
+      <p>SpeakPass · HALOWS, Y.K.</p>
+      <p>Not affiliated with British Council, IDP, or Cambridge Assessment.</p>
+    </footer>
+  </main>
 </body>
 </html>
